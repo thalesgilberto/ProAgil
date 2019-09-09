@@ -17,7 +17,7 @@ namespace ProAgil.API.Data
         public Repository(TEntity entity, TDbContext dbContext)
         {
             _entity = entity;
-            _dbContext = dbContext;
+            _dbContext = dbContext; //barril
         }
         public static void Delete(Expression<Func<TEntity, bool>> expression)
         {
