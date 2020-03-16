@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProAgil.API", "ProAgil.API.csproj", "{EE4C5C90-F3E0-4546-960C-D7EE7C3648FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4C5C90-F3E0-4546-960C-D7EE7C3648FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4C5C90-F3E0-4546-960C-D7EE7C3648FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4C5C90-F3E0-4546-960C-D7EE7C3648FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4C5C90-F3E0-4546-960C-D7EE7C3648FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF79C85F-AAEF-435F-AC3D-8155EF57E644}
+	EndGlobalSection
+EndGlobal
