@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProAgil.API.Data;
-using ProAgil.API.Model;
 
 namespace ProAgil.API.Controllers
 {
@@ -67,28 +62,16 @@ namespace ProAgil.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            _dataContext.Eventos.Remove(_dataContext.Eventos.Find(id));
             try
-            {
-                _dataContext.Eventos.RemoveRange(_dataContext.Eventos.Where(x => x.EventoId == id)
-                                                                     .Select(x => new Evento { EventoId = x.EventoId }));             
+            {                            
                 await _dataContext.SaveChangesAsync();
                 return Ok();
             }
             catch (System.Exception)
-            {                
+            {
                 throw;
             }            
         }
-
-        //Estudar melhor forma de fazer o método delete com lamdba
-        //public static void Delete<TEntity>(Expression<Func<TEntity, bool>> expression) where TEntity : class
-        //{ 
-            //var obj = Expression.Convert(expression.Body, typeof(UnaryExpression));
-            //string className = typeof(TEntity).Name;
-            //string conditions = expression.Body.ToString().Replace("AndAlso", "AND").Replace("OrElse", "OR").Replace("==", "=");
-            //string aliasClassName = expression.Parameters.First().Name;
-            //string sqlQuery = $@"DELETE FROM {className} {aliasClassName} WHERE {conditions}";
-            //Console.WriteLine(sqlQuery);
-        //}
     }
 }
